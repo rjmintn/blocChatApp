@@ -1,0 +1,14 @@
+<!-- This was the original form to set cookie -->
+
+<form ng-submit="$SetUsernameModal.ok()">
+  <div class="modal-header">
+    <h3 class="modal-title">Set a username</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+    <p>This name will appear when you send messages</p>
+    <input type="text"  ng-model="$SetUsernameModal.username" required/>
+  </div>
+  <div class="modal-footer">
+    <input class="btn btn-primary" type="submit" />
+  </div>
+</form>

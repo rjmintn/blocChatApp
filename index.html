@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="blocChat">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bloc Chat</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="s<span>{{msg.username}}</span>me}}</sp>1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body>
+  <h1>Bloc Chat</h1>
+  <ui-view></ui-view>
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <!-- AngularUI Router -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+  <!-- AngularUI Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+  <!-- Angular Cookies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script>
+  <!-- FireBase -->
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  <!-- <script src="scripts/includes/angularfire.js"></script> -->
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBI5WyKIu0SnlBGHZzbtNa8o6VhTiTD0GA",
+      authDomain: "bloc-chat-27b6b.firebaseapp.com",
+      databaseURL: "https://bloc-chat-27b6b.firebaseio.com",
+      projectId: "bloc-chat-27b6b",
+      storageBucket: "bloc-chat-27b6b.appspot.com",
+      messagingSenderId: "287096545157"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- Application Files -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/HomeCtrl.js"></script>
+  <script src="scripts/controllers/ModalDemoCtrl.js"></script>
+  <script src="scripts/controllers/ModalInstanceCtrl.js"></script>
+  <!-- <script src="scripts/controllers/SetUsernameCtrl.js"></script> -->
+  <script src="scripts/controllers/LoginModalCtrl.js"></script>
+  <script src="scripts/controllers/AuthenticationCtrl.js"></script>
+  <script src="scripts/services/Login.js"></script>
+  <script src="scripts/controllers/SendMessageCtrl.js"></script>
+  <script src="scripts/services/Room.js"></script>
+  <script src="scripts/services/MessageFactory.js"></script>
+  <script src="scripts/services/UserServices.js"></script>
+</body>
+</html>

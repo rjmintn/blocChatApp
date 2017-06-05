@@ -1,0 +1,30 @@
+<section class="container">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div> <button ng-controller="ModalDemoCtrl as $ctrl" type="button" class="btn btn-primary" ng-click="$ctrl.open('sm')">New Room</button>
+        <div ng-controller="AuthenticationControl as AC">
+        <button ng-show="false" type="button" class="btn btn-primary btn-xs" ng-click="AC.firebaseAuthObj.login()">Login</button>
+        <button type="button" class="btn btn-primary btn-xs" ng-click="AC.firebaseAuthObj.logout()">Logout</button>
+        <button ng-show="false" type="button" class="btn btn-primary btn-xs" ng-click="AC.firebaseAuthObj.create()">Create User</button>
+        <button ng-show="false" type="button" class="btn btn-primary btn-xs" ng-click="AC.firebaseAuthObj.delete()">Delete User</button>
+        <button ng-show="false" type="button" class="btn btn-primary btn-xs" ng-click="AC.firebaseAuthObj.edit()">Edit User</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid" >
+    <div class="row content">
+      <aside class="sideBar col-sm-3">
+        <ng-include !ng-show="false" src="'templates/roomList.html'"></ng-include>
+      </aside>
+    <article class="col-sm-8">
+      <ng-include !ng-show="false" src="'templates/chatArea.html'"></ng-include>
+    </article>
+    <div class="col-sm-1">
+      <!-- <ng-include src="'templates/login.html'"></ng-include> -->
+    </div>
+  </div>
+  </div>
+</section>

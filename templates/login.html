@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+  <form>
+    <div class="modal-header">
+      <h3>Login</h3>
+      <h6>Please login or create user</h6>
+    </div>
+    <div class="modal-body form-group" novalidate>
+      <input type="email" class="form-control" ng-model="loginUser.email" placeholder="Email" />
+      <input type="password" class="form-control" ng-model="loginUser.password" placeholder="Password" />
+      <input class="btn btn-primary btn-xs" type="submit" ng-click="LoginModal.ok(loginUser)" value="Login" />
+    </div>
+    <div class="panel-footer">
+      <input type="email" class="form-control" ng-model="createUser.email" placeholder="Email" />
+      <input type="password" class="form-control" ng-model="createUser.password" placeholder="Password" />
+      <input type="password" class="form-control" ng-model="createUser.password2" placeholder="Verify password" />
+      <input type="text" class="form-control" ng-model="createUser.displayName" placeholder="Display name..." />
+      <input class="btn btn-primary btn-xs" type="submit" ng-click="LoginModal.create(createUser)" value="Create User" />
+    </div>
+  </form>
+</div>

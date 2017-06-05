@@ -1,0 +1,37 @@
+<section id="chatArea">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div>
+      <h6>Room: {{ home.roomTitle }} </h6>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div  ng-repeat="msg in home.roomMessages.messages1 track by $index">
+        <div> <h6>{{msg.displayName}}<small> -- {{msg.sentAt | date:"h:mm a"}}</small></h6>
+          <div class="text-success well well-sm"> {{ msg.content }}</div>
+        </div>
+      </div>
+      <div class="panel-footer">
+      <form ng-controller="SendMessageCtrl as SendMessage" data-not-ng-submit="SendMessage.send(msg, home.selectedRoom)">
+        <div class="form-group">
+          <div>
+            <input id="test" type="text" class="form-control" ng-keyup="$event.keyCode == 13 && SendMessage.send(msg, home.selectedRoom)" ng-model="msg" placeholder="Message here..." />
+          </div>
+          <!-- <input class="btn btn-primary" type="submit"   value="Send" /> -->
+        </div>
+      </form>
+
+
+
+
+<!-- I need to work at some point. Needs to show current logged in user before selecting a room -->
+
+
+
+
+    </div><h6 style="text-align:right">You are: {{home.roomMessages.currentUser}}</h6>
+    </div>
+  </div>
+</section>
+<!--  -->
+<!-- ng-keyup="$event.keyCode == 13 && SendMessage.send(msg, home.selectedRoom)" -->
