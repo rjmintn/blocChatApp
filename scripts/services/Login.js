@@ -11,13 +11,13 @@
    *
    */
   function Login($cookies, $uibModal, $firebaseAuth){
-    // $firebaseAuth().$signOut().then(function (){
-    //   console.log ("logout");
-    //    $cookies.remove('blocChatCurrentUser');
-    // });
-    var currentUsr =   $cookies.get('blocChatCurrentUser');
-    var usr = firebase.auth();
-
+    $firebaseAuth().$signOut().then(function (){
+      console.log ("logout");
+       $cookies.remove('blocChatCurrentUser');
+    });
+    var currentUsr = "";
+    console.log ("fbUser");
+    var fbu1 = firebase.auth();
 
     if (!currentUsr || currentUsr === '') {
       $uibModal.open({

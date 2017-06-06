@@ -11,6 +11,12 @@
      *
      */
     this.allRooms = Room2.all;
+    // this.loggedInUser = ;
+    // if (firebase.auth().currentUser != null) {
+    //   this.loggedInUser = firebase.auth().currentUser.displayName;
+    //   console.log(this.loggedInUser);
+    // }
+
 
     /**
      * @ngdoc changes to new chat room.

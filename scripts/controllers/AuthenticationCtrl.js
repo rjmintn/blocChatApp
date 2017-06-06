@@ -13,6 +13,7 @@
 
   function authCtrl(userSvc) {
     this.firebaseAuthObj = userSvc;
+    console.dir(userSvc);
   }
 
 })();

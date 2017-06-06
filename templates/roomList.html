@@ -1,5 +1,6 @@
 <div class="bs-component">
   <div class="btn-group-vertical">
+    <button class="btn btn-primary">Room List</button>
     <a class="btn btn-default" ng-repeat="room in home.allRooms track by $index" ng-click="home.changeRoom(room)">{{ room.$value }}</a>
 
   </div>

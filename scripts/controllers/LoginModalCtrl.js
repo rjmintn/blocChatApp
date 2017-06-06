@@ -17,16 +17,15 @@
     UserServices.close = $uibModalInstance.close;
     submit.login = UserServices.login;
     submit.create = UserServices.create;
+    console.dir(this);
 
 
     response.ok = function (user) {
       submit.login(user);
-      // $uibModalInstance.close();
     };
 
     response.create = function (user) {
       submit.create(user);
-      // $uibModalInstance.close();
     };
   }
 

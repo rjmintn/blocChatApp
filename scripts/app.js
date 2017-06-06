@@ -24,12 +24,12 @@
         url: prefix,
         controller: 'HomeCtrl2 as home',
         templateUrl: 'templates/home.html'
-      })
-      .state('chatArea', {
-        // url: '#chatArea',
-        controller: 'HomeCtrl2 as home',
-        templateUrl: 'templates/chatArea.html'
       });
+      // .state('chatArea', {
+      //   // url: '#chatArea',
+      //   controller: 'HomeCtrl2 as home',
+      //   templateUrl: 'templates/chatArea.html'
+      // });
       $cookiesProvider.defaults.secure = false;
   }
 

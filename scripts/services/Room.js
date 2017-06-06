@@ -21,6 +21,7 @@
      *
      *
      */
+      //   console.log(firebase.auth().currentUser.displayName);
     Room3.all = rooms;
 
     /**

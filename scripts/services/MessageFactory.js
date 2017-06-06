@@ -14,7 +14,8 @@
      */
     var $Message = {};
     $Message.messages1 = {};
-      $Message.currentUser = "RJ";
+    $Message.currentUser = ' not logged in'
+//      console.dir(firebase.auth().currentUser.displayName);
       //  (firebase.auth().currentUser.displayName) ? firebase.auth().currentUser.displayName : "RJ";
 
 

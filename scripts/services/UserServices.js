@@ -22,6 +22,7 @@
     userSvc.user = {};
     userSvc.response = "";
     userSvc.modal = $uibModal;
+    userSvc.loggedInUser = "not logged in.";
     // console.dir($uibModal);
 
     /**
@@ -53,9 +54,9 @@
         var expireDate = new Date();
         userSvc.close();
         expireDate.setDate(expireDate.getDate() + 1.0001);
-        $cookies.put('blocChatCurrentUser', loginUser.email, {'expires': expireDate});
+        $cookies.put('blocChatCurrentUser', firebaseUser.displayName, {'expires': expireDate});
         userSvc.response = ("Welcome " + firebaseUser.email);
-
+        userSvc.loggedInUser = firebaseUser.displayName;
       })
       .catch(function(error) {
         console.error("Authentication failed:", error);
